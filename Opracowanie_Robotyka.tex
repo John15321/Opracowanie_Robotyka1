@@ -1006,6 +1006,106 @@ $$ rank\{J\} \leq min\{ m, n \} $$
 
 \end{enumerate}
 
+\subsection{Jakobian manipulatora}
+
+"Jakobian oderwany od współrzędnych. Wskazuje prawdziwe osobliwości, nie tylko zależne od współrzędnych"
+Opisuje prędkość efektora na skutek działania pojedynczego stopnia swobody.
+Przelicza się ten ruch do układu podstawowego $X_0, Y_0, Z_0$
+
+$$  J_m =
+    \begin{bmatrix}
+        \dot{T} \\
+        \omega_s
+    \end{bmatrix}
+    = \begin{bmatrix}
+        J_{m1} & J_{m2} & ... & J_{mn}
+    \end{bmatrix}
+$$
+
+Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopnia i-tego na chwytak.
+
+\begin{enumerate}
+    \item Dla przegubu obrotowego i-tego:
+
+    \begin{kol2}
+        Prędkość kątowa:
+
+        $$  e_3 \cdot \dot{q}_i $$
+    \end{kol2}
+    \begin{kol2}
+        Prędkość liniowa:
+
+        $$  -T_{i-1}^n \times e_3 \dot{q}_i = e_3 \dot{q}_i T_{i-1}^n $$
+    \end{kol2}
+
+    Przeliczone do układu postawowego $X_0Y_0Z_0$:
+
+    \begin{kol2}
+        Prędkość kątowa:
+
+        $$  R_0^{i-1} e_3 \dot{q}_i $$
+    \end{kol2}
+    \begin{kol2}
+        Prędkość liniowa:
+
+        $$  -R_0^{i-1}(T_{i-1}^n \times e_3 \dot{q}_i ) $$
+    \end{kol2}
+
+    \Large
+    $$  J_{mi} = \begin{bmatrix}
+        (R_{0,\ 3k}^{i-1}) \times (T_0^m - T_0^{i-1}) \\
+        R_{0,\ 3k}^{i-1}
+        \end{bmatrix}
+    $$
+    \normalsize
+
+    \item Dla przegubu przesuwnego i-tego:
+
+    \begin{kol2}
+        Prędkość kątowa:
+
+        $$  0 $$
+    \end{kol2}
+    \begin{kol2}
+        Prędkość liniowa:
+
+        $$  e_3 \dot{q}_i $$
+    \end{kol2}
+
+    Przeliczone do układu postawowego $X_0Y_0Z_0$:
+
+    \begin{kol2}
+        Prędkość kątowa:
+
+        $$  0 $$
+    \end{kol2}
+    \begin{kol2}
+        Prędkość liniowa:
+
+        $$  R_0^{i-1} \cdot e_3 \cdot \dot{q}_i $$
+    \end{kol2}
+
+    \Large
+    $$  J_{mi} = \begin{bmatrix}
+        (R_{0,\ 3k}^{i-1}) \\
+        0_{3\times 1}
+        \end{bmatrix}
+    $$
+    \normalsize
+
+\end{enumerate}
+
+\large
+$$  \hspace{1cm}
+    R_0^0 = \textbf{1}_{3x3}
+    \hspace{1cm}
+    T_0^0 = ( 0;\ 0;\ 0 )^T
+$$
+\normalsize
+
+% Notatka na pozniej:
+% Jakobian analityczny oraz jakobian geometryczny mają identyczną część odpowiadającym współrzędnym położenia.
+
 \newpage
 
 \section{Przydatne wzorki}
