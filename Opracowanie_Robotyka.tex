@@ -1106,6 +1106,65 @@ $$
 % Notatka na pozniej:
 % Jakobian analityczny oraz jakobian geometryczny mają identyczną część odpowiadającym współrzędnym położenia.
 
+\section{Dynamika sztywnego manipulatora}
+
+\begin{kol2}
+    Równanie Lagrange'a:
+
+    \Large
+    $$ \frac{d}{dt} \left( \frac{\delta \textbf{L}}{\delta \dot{q}} \right) - \frac{\delta \textbf{L}}{\delta q} = 0 $$
+    \normalsize
+\end{kol2}
+\begin{kol2}
+    Energia:
+
+    \Large
+    $$ \textbf{L}(q,\dot{q}) = E_k - V $$
+    $$ E_k = \frac12 \dot{q}^T M(q) \dot{q} $$
+    \normalsize
+\end{kol2}
+
+% ---------------------------------------------------------------------------
+\section{Kinematyka robota mobilnego}
+
+\begin{kol2}
+    BPB - Brak poślizgu bocznego:
+    \Large
+    $$ \dot{x} sin \phi - \dot{y} cos \phi = 0 $$
+    \normalsize
+\end{kol2}
+\begin{kol2}
+    BPW - Brak poślizgu wzdłużnego:
+    \Large
+    $$ \dot{x} sin \phi - \dot{y} cos \phi - r \dot{\theta} = 0 $$
+    \normalsize
+\end{kol2}
+
+\vspace{0.5cm}
+\large
+$(x,y)$ - współrzedne koła względem układu globalnego;
+
+$\phi$ - orientacja koła względem $X_0$ układu globalnego;
+
+$r$ - promień koła;
+
+$\dot{\theta}$ - prędkośc obrotowa koła;
+\normalsize
+
+\vspace{0.5cm}
+\noindent
+Ograniczenia Pfaffa:
+
+\Large
+$$ A(q) \cdot \dot{q} = 0 $$
+\normalsize
+
+\vspace{0.5cm}
+\large
+$ A(q) $ - Macirz ograniczeń, zbiór równań BPB, PBW;
+\normalsize
+
+% ---------------------------------------------------------------------------
 \newpage
 
 \section{Przydatne wzorki}

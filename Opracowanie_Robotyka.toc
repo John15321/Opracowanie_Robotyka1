@@ -23,5 +23,7 @@
 \contentsline {subsubsection}{\numberline {5.2.1}Zasada Pracy Wirtualnej}{16}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Konfiguracje osobliwe i regularne}{16}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Jakobian manipulatora}{16}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Przydatne wzorki}{18}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Trygonometria}{18}{subsection.6.1}%
+\contentsline {section}{\numberline {6}Dynamika sztywnego manipulatora}{17}{section.6}%
+\contentsline {section}{\numberline {7}Kinematyka robota mobilnego}{17}{section.7}%
+\contentsline {section}{\numberline {8}Przydatne wzorki}{18}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Trygonometria}{18}{subsection.8.1}%
