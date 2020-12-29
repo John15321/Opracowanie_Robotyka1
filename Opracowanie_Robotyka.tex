@@ -938,7 +938,7 @@ $$
 
 Pierwsze 3 elementy $K$ określają współrzędne kartezjańskiego, drugie 3 współrzędne obrotowe.
 
-\subsection{Jakobian}
+\subsection{Jakobian analityczny}
 \Large
 $$
     J(q)_{m\times n} = \begin{bmatrix}
@@ -1006,21 +1006,83 @@ $$ rank\{J\} \leq min\{ m, n \} $$
 
 \end{enumerate}
 
+\newpage
+
+\section{Jakobian geometryczny}
+Jest niezależny od wyboru współrzędnych.
+
+\begin{kol2}
+    \subsection{Jakobian geometryczny w przestrzeni}
+
+    \Large
+    $$  J_S(q)\dot{q} = \left( \begin{matrix}
+            \dot{T} + [T] \omega_S \\
+            \omega_S
+        \end{matrix} \right)
+    $$
+    \normalsize
+\end{kol2}
+\begin{kol2}
+    \subsection{Jakobian geometryczny w ciele}
+
+    \Large
+    $$  J_B(q)\dot{q} \left( \begin{matrix}
+            R^T \omega_B \\
+            \omega_B
+        \end{matrix} \right)
+    $$
+    \normalsize
+\end{kol2}
+
+\vspace{1cm}
+\begin{kol2}
+    Przekształcenia:
+
+    \large
+    $$  J_S(q) = \left[ \begin{matrix}
+        R   & [T]R  \\
+        0   &  R    \\
+    \end{matrix} \right] J_B(q)
+    $$
+    \normalsize
+    \large
+    $$  J_S(q) = \left[ \begin{matrix}
+        I_3 & [T] \\
+        0   & I_3 \\
+    \end{matrix} \right] J_M(q)
+    $$
+    \normalsize
+\end{kol2}
+\begin{kol2}
+    Przypomnienie
+
+    $$ T = (T_1, T_2, T_3)^T $$
+    $$ [T] = \left[ \begin{matrix}
+        0   &   -T_3    &   T_2 \\
+        T_3 &   0       &   -T_1\\
+        -T_2&   T_1     &   0   \\
+    \end{matrix} \right]
+    $$
+\end{kol2}
+\vspace{0.5cm}
+
 \subsection{Jakobian manipulatora}
 
 "Jakobian oderwany od współrzędnych. Wskazuje prawdziwe osobliwości, nie tylko zależne od współrzędnych"
 Opisuje prędkość efektora na skutek działania pojedynczego stopnia swobody.
 Przelicza się ten ruch do układu podstawowego $X_0, Y_0, Z_0$
 
-$$  J_m =
+\Large
+$$  J_M (q) \dot(q) =
     \begin{bmatrix}
         \dot{T} \\
         \omega_s
     \end{bmatrix}
-    = \begin{bmatrix}
-        J_{m1} & J_{m2} & ... & J_{mn}
-    \end{bmatrix}
+    = \left[
+        J_{M1}(q) \dot{q_1}, J_{M2}(q) \dot{q_2}, ... J_{Mn}(q) \dot{q_n},
+    \right]
 $$
+\normalsize
 
 Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopnia i-tego na chwytak.
 
@@ -1030,12 +1092,16 @@ Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopn
     \begin{kol2}
         Prędkość kątowa:
 
+        \Large
         $$  e_3 \cdot \dot{q}_i $$
+        \normalsize
     \end{kol2}
     \begin{kol2}
         Prędkość liniowa:
 
+        \Large
         $$  -T_{i-1}^n \times e_3 \dot{q}_i = e_3 \dot{q}_i T_{i-1}^n $$
+        \normalsize
     \end{kol2}
 
     Przeliczone do układu podstawowego $X_0Y_0Z_0$:
@@ -1043,14 +1109,19 @@ Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopn
     \begin{kol2}
         Prędkość kątowa:
 
+        \Large
         $$  R_0^{i-1} e_3 \dot{q}_i $$
+        \normalsize
     \end{kol2}
     \begin{kol2}
         Prędkość liniowa:
 
+        \Large
         $$  -R_0^{i-1}(T_{i-1}^n \times e_3 \dot{q}_i ) $$
+        \normalsize
     \end{kol2}
 
+    \vspace{0.5cm}
     \Large
     $$  J_{mi} = \begin{bmatrix}
         (R_{0,\ 3k}^{i-1}) \times (T_0^m - T_0^{i-1}) \\
@@ -1085,6 +1156,7 @@ Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopn
         $$  R_0^{i-1} \cdot e_3 \cdot \dot{q}_i $$
     \end{kol2}
 
+    \vspace{0.5cm}
     \Large
     $$  J_{mi} = \begin{bmatrix}
         (R_{0,\ 3k}^{i-1}) \\
