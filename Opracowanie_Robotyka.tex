@@ -401,7 +401,7 @@ Ważne:
 
 \newpage
 
-\subsection{Parametryzjacja obrotów}
+\subsection{Parametryzacja obrotów}
 
 \Large
 $$
@@ -531,7 +531,7 @@ Mamy jakiś wektor {\bf k} i chcemy go unormować, żeby miał długość $1$ i 
 podany kąt o jaki chcielibyśmy wykonać obrót:
 
 
-Zwykły wektor $k_{zw}$, który chemy unormować do postaci $k =
+Zwykły wektor $k_{zw}$, który chcemy unormować do postaci $k =
     \begin{pmatrix}
         k_{x} \\
         k_{y} \\
@@ -577,7 +577,7 @@ $$
     \includegraphics[scale=0.5]{img/kierunek_osi_obrotu.jpg}
 \end{figure}
 
-Ogólną macierz transformacji o dowolny (unormowany) wetkor można policzyć na wiele sposobów.
+Ogólną macierz transformacji o dowolny (unormowany) wektor można policzyć na wiele sposobów.
 Jest to transformacja odwrotna do transformacji {\bf oś-kąt}
 
 \newpage
@@ -612,7 +612,7 @@ $$
     \dot R(t)R^{T}(t)+R(t)\dot R^{T}(t)=\dot R^{T}(t)R(t)+R^{T}(t)\dot R(t)=0
 $$
 
-Otrzymujemy dwa pojęcia prędkości kątowej ciała sztywnego zdefniniowane macierzami:
+Otrzymujemy dwa pojęcia prędkości kątowej ciała sztywnego zdefiniowane macierzami:
 
 \begin{enumerate}
     \item $\Omega_{S}=\dot R R^{T}$ - prędkość w {\bf przestrzeni} ({\bf S} od {\bf Space})
@@ -717,7 +717,7 @@ $$
     V_{B} = c^{-1} \dot c
 $$
 
-Na mocy powyższych defnicji otrzymujemy:
+Na mocy powyższych definicji otrzymujemy:
 
 $$
     V_{S}=
@@ -773,7 +773,7 @@ $$
     \end{pmatrix}
 $$
 
-Korzystając z własności prędkości kątowych w przestrzeni i w ciele oraz z izomofrizmu $\left[ \ \right]$ otrzymujemy następujący związek między skrętnikami:
+Korzystając z własności prędkości kątowych w przestrzeni i w ciele oraz z izomorfizmu $\left[ \ \right]$ otrzymujemy następujący związek między skrętnikami:
 
 $$
     v_{S}=
@@ -812,7 +812,7 @@ $$
     \end{pmatrix}
 $$
 
-Wynika stąd, że macierzowa prędkość $V_{S}$ określa prędkość ruchu punktu P o współrzędnych jednorodnych $(p^{T}, 1)^{T}$, względem układu przestrzeni. Prowadz to do wniosku:
+Wynika stąd, że macierzowa prędkość $V_{S}$ określa prędkość ruchu punktu P o współrzędnych jednorodnych $(p^{T}, 1)^{T}$, względem układu przestrzeni. Prowadź to do wniosku:
 
 $$
     \begin{pmatrix}
@@ -835,14 +835,14 @@ $$
 
 Liczenie kinematyki manipulatora.
 
-Chcemy opisać położenie i orientacje ostatniego ogniwa w manipulatorze, które nazywa się chwytakiem (end-effector), ostatni układ współrzednych to jest układ efektora. Mamy też zerowy układ współrzednych (ten nieruchomy) względem, którego wszystko chcemy przeliczać. Zwykle jest to jakiś punkt, który gdzieś się znajduje np. jakaś platforma. Układ zerowy nosi nazwę układu "podstawowego" lub "bazowego" nalezy go traktować jako układ przestrzeni.
+Chcemy opisać położenie i orientacje ostatniego ogniwa w manipulatorze, które nazywa się chwytakiem (end-effector), ostatni układ współrzędnych to jest układ efektora. Mamy też zerowy układ współrzędnych (ten nieruchomy) względem, którego wszystko chcemy przeliczać. Zwykle jest to jakiś punkt, który gdzieś się znajduje np. jakaś platforma. Układ zerowy nosi nazwę układu "podstawowego" lub "bazowego" należy go traktować jako układ przestrzeni.
 
-Opis położenia końcówki ramienia manupulatora, który np przykręca śróbkę. Musi być w obeć sróbki pod dobrym kontem itp. W związku z tym naszym celem jest zorientowanie się gdzie znajduje się koncówka manipulatora, jaką ma orientację i czy jest ona dobra.
-Tak więc musimy wyrazić położenie końcówki względem układu podstawowego. Uzyskanie takiej transofrmacji nazywa się "kinematyką".
-Taką kinematykę wylicza się względem algorytmu {\bf Danovita-Hartenberga}.
+Opis położenia końcówki ramienia manipulatora, który np. przykręca śrubkę. Musi być w śrubki pod dobrym kątem itp. W związku z tym naszym celem jest zorientowanie się gdzie znajduje się końcówka manipulatora, jaką ma orientację i czy jest ona dobra.
+Tak więc musimy wyrazić położenie końcówki względem układu podstawowego. Uzyskanie takiej transformacji nazywa się "kinematyką".
+Taką kinematykę wylicza się względem algorytmu {\bf Denavita-Hartenberga}.
 
 
-Za pomocą $4$ parametrów chcemy opisać ruch jednego układu współrzednych względem drugiego układu współrzednych.
+Za pomocą $4$ parametrów chcemy opisać ruch jednego układu współrzędnych względem drugiego układu współrzędnych.
 
 % 1:15:00
 
@@ -861,13 +861,13 @@ swobody. Jeśli jeden przegub może wykonywać dwa niezależne ruchy to każdy z
     \includegraphics[scale=0.5]{img/manipulator_sz.jpg}
 \end{figure}
 
-Z reguły opisując manipulator nadajemy im nazwy związane z ilościa stopni swobody.
-Np podwójne wachadło (RR) oznacza, że są 2 obrotowe stopnie swobody, manipulator RTR to obrotowy, przesuwny i obrotowy itp. itd..
+Z reguły opisując manipulator nadajemy im nazwy związane z ilością stopni swobody.
+Np podwójne wahadło (RR) oznacza, że są 2 obrotowe stopnie swobody, manipulator RTR to obrotowy, przesuwny i obrotowy itp. itd..
 
-Przez przestrzeń przegubową manipulatora rozumiemy wektor. Każda składowa tego wektora to jest położenie pojedyńczego przegubu. Czyli np manipulator o 3 stopniach swobody bedzie miał przestrzeń przegubową $q_{1}, q_{2}, q_{3}$.
+Przez przestrzeń przegubową manipulatora rozumiemy wektor. Każda składowa tego wektora to jest położenie pojedyńczego przegubu. Czyli np manipulator o 3 stopniach swobody będzie miał przestrzeń przegubową $q_{1}, q_{2}, q_{3}$.
 
-Jeśli chcemy opisać kinematykę, czyli położenie i orientację punktu pracy/efektora względem podstawy. Wybieramy dwa specjalne układy współrzedne.
-Pierwszy układ współrzednych związany jest z podstawą, jest to układ "bazowy", "podstawowy", jest nieruchomy (układ przestrzeni)(Space).
+Jeśli chcemy opisać kinematykę, czyli położenie i orientację punktu pracy/efektora względem podstawy. Wybieramy dwa specjalne układy współrzędne.
+Pierwszy układ współrzędnych związany jest z podstawą, jest to układ "bazowy", "podstawowy", jest nieruchomy (układ przestrzeni)(Space).
 Drugi układ związany jest z efektorem, jest to układ ciała (Body).
 Chcemy za ich pomocą wyrazić kinematykę manipulatora czyli powiedzieć gdzie znajduje się efektor względem układu podstawowego i jak jest względem niego skierowany.
 
@@ -878,12 +878,12 @@ Chcemy za ich pomocą wyrazić kinematykę manipulatora czyli powiedzieć gdzie 
 % 3:40 wyk4
 \begin{enumerate}
     \item Przyjmujemy oś $Z_i$ tak, by ruch w przegubie następnym przegubie ($i+1$) zachodził względem niej;
-    \item Prowadziny normalną do osi $Z_{i-1}$ i $Z_i$;
+    \item Prowadzimy normalną do osi $Z_{i-1}$ i $Z_i$;
     \item Początek układu $i$ umieszczany na przecięciu normalnej z osią $Z_i$;
     \item oś $X$ prowadzimy wzdłuż normalnej, oś $Y_i$ spełnia warunek $X_u \times Y_i = Z_i$
     \item (a oś $Y$, nie jest nam potrzebna)
           \begin{enumerate}
-              \item Jeśli koeljne osie $Z$ są równoległe (nieskończenie wiele normalnych),
+              \item Jeśli kolejne osie $Z$ są równoległe (nieskończenie wiele normalnych),
                     to wybieramy przechodzącą przez początek układu $i-1$
               \item jeśli $Z_{i-1} = Z_i$, to postępujemy "zgodnie ze zdrowym rozsądkiem"
           \end{enumerate}
@@ -909,7 +909,7 @@ $$
 
 \section{Kinematyka}
 
-Współrzedne efektora:
+Współrzędne efektora:
 $$
     y(t) = k( q(t) )
 $$
@@ -936,7 +936,7 @@ $$
 $$
 \normalsize
 
-Pierwsze 3 elementy $K$ określają współrzędne kartezjańskiego, drugie 3 współrzene obrotowe.
+Pierwsze 3 elementy $K$ określają współrzędne kartezjańskiego, drugie 3 współrzędne obrotowe.
 
 \subsection{Jakobian}
 \Large
@@ -978,12 +978,12 @@ $$ f = \tau J^T $$
 \begin{kol2}
     Praca w przestrzeni zewnętrznej
     $$ \tau^T\ dy $$
-    $\tau$ - siły (/momenty sił) wywiarne na chwytak
+    $\tau$ - siły (/momenty sił) wywierane na chwytak
 \end{kol2}
 \begin{kol2}
     Praca w przestrzeni przegubowej
     $$ f^t\ dq$$
-    $f$ - siły (/momenty sił) wywiarne w przegubach
+    $f$ - siły (/momenty sił) wywierane w przegubach
 \end{kol2}
 
 % praca wirtualna wykład 11-04, 54:00
@@ -1038,7 +1038,7 @@ Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopn
         $$  -T_{i-1}^n \times e_3 \dot{q}_i = e_3 \dot{q}_i T_{i-1}^n $$
     \end{kol2}
 
-    Przeliczone do układu postawowego $X_0Y_0Z_0$:
+    Przeliczone do układu podstawowego $X_0Y_0Z_0$:
 
     \begin{kol2}
         Prędkość kątowa:
@@ -1072,7 +1072,7 @@ Unieruchamiamy wszystkie przeguby oprócz i-tego i sprawdzamy wpływ ruchu stopn
         $$  e_3 \dot{q}_i $$
     \end{kol2}
 
-    Przeliczone do układu postawowego $X_0Y_0Z_0$:
+    Przeliczone do układu podstawowego $X_0Y_0Z_0$:
 
     \begin{kol2}
         Prędkość kątowa:
@@ -1103,7 +1103,7 @@ $$  \hspace{1cm}
 $$
 \normalsize
 
-% Notatka na pozniej:
+% Notatka na później:
 % Jakobian analityczny oraz jakobian geometryczny mają identyczną część odpowiadającym współrzędnym położenia.
 
 \section{Dynamika sztywnego manipulatora}
@@ -1142,13 +1142,13 @@ $$
 
 \vspace{0.5cm}
 \large
-$(x,y)$ - współrzedne koła względem układu globalnego;
+$(x,y)$ - współrzędne koła względem układu globalnego;
 
 $\phi$ - orientacja koła względem $X_0$ układu globalnego;
 
 $r$ - promień koła;
 
-$\dot{\theta}$ - prędkośc obrotowa koła;
+$\dot{\theta}$ - prędkość obrotowa koła;
 \normalsize
 
 \vspace{0.5cm}
@@ -1161,7 +1161,7 @@ $$ A(q) \cdot \dot{q} = 0 $$
 
 \vspace{0.5cm}
 \large
-$ A(q) $ - Macirz ograniczeń, zbiór równań BPB, PBW;
+$ A(q) $ - Macierz ograniczeń, zbiór równań BPB, PBW;
 \normalsize
 
 % ---------------------------------------------------------------------------
@@ -1185,7 +1185,7 @@ $ A(q) $ - Macirz ograniczeń, zbiór równań BPB, PBW;
 \begin{kol2}
 
     \noindent
-    Wartości funckji
+    Wartości funkcji\textbf{}
     $$
         \begin{array}{c|c|c|c|c|c|c}
                 & 0^\circ & 30^\circ       & 45^\circ       & 60^\circ       & 90^\circ  & 180^\circ \\

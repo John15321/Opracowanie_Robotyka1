@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Współrzędne jednorodne, rozszerzenie do 4 wymiarów}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Dzięki współrzędnym jednorodnym operacja rotacji i translacji jest reprezentowana przez jedną macierz}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Składanie ruchów}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Parametryzjacja obrotów}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Parametryzacja obrotów}{7}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Reprezentacja obrotów: Kąty Eulera}{7}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}Reprezentacja obrotów: Roll-Pitch-Jaw}{8}{subsubsection.2.4.2}%
 \contentsline {subsubsection}{\numberline {2.4.3}Reprezentacja typu oś-kąt, dla macierzy {\bf R}, k-oś (musi być znormalizowana, czyli $\left \lVert k\right \rVert =1$)}{8}{subsubsection.2.4.3}%
