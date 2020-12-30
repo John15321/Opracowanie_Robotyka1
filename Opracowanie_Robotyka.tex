@@ -1175,6 +1175,32 @@ $$  \hspace{1cm}
 $$
 \normalsize
 
+\subsection{Miary zręczności manipulator}
+% todo Miary zręczności manipulatora (wykład 8)
+Elipsoida manipulowalności
+
+Jakobian przekształca prędkości
+$$ \dot{y} = J(q) \dot{q} $$
+
+Pseudoodwrotność Moore'a-Penrouse'a
+$$ J^{\#} = J^T (J J^T)^{-1} $$
+
+Definiujemy sferę jednostkową w konkretnej przestrzeni przegubowej, taką że
+$$ S(q) = \{ \dot{q} \in R^n : {||\dot{q}||}^2 = 1 \} $$
+
+I obliczamy jej obraz w przestrzeni prędkości
+$$ E(q) = J(q) S(q) = \{ \dot{y} = J(q)\dot{q}, {||\dot{q}||}^2 = 1 \} $$
+$$ {||\dot{q}||}^2 = \dot{y}^T J^{\#} \dot{y} = 1 $$
+$$ M(q) = J J^T $$
+
+Objętość elipsoidy, manipulowalność
+$$ m(q) = \sqrt{det M(q)} $$
+
+Współczynnik uwarunkowania
+$$ K(q) = \sqrt{ \frac{...}{...} }$$
+
+
+
 \newpage
 \section{Dynamika sztywnego manipulatora}
 % Wykład 8
