@@ -1006,10 +1006,10 @@ $$ rank\{J\} \leq min\{ m, n \} $$
 
 \end{enumerate}
 
-\newpage
-
 \section{Jakobian geometryczny}
 Jest niezależny od wyboru współrzędnych.
+
+Jakobian analityczny oraz jakobian geometryczny mają identyczną część odpowiadającym współrzędnym położenia.
 
 \begin{kol2}
     \subsection{Jakobian geometryczny w przestrzeni}
@@ -1175,13 +1175,63 @@ $$  \hspace{1cm}
 $$
 \normalsize
 
-% Notatka na później:
-% Jakobian analityczny oraz jakobian geometryczny mają identyczną część odpowiadającym współrzędnym położenia.
-
+\newpage
 \section{Dynamika sztywnego manipulatora}
+% Wykład 8
 
+Energię wyliczamy względem nieruchomego układu podstawowego $X_0Y_0Z_0$
+
+\noindent
+Położenie masy względem układu podstawowego:
+$$ S_i = A_0^i(q_1, ..., q_i) r_i \hspace{1cm} \dot{S_i} = \dot{A_0^i} r_i $$
+
+$ r_i $ - położenie względem układu lokalne $X_iY_iZ_i$
+
+\vspace{0.5cm}
 \begin{kol2}
-    Równanie Lagrange'a:
+    Energia kinetyczna ogniwa $L_i$:
+
+    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) \int_{L_i} r_i r_i^T\ dm (\dot{A_0^i})^T \right\} $$
+    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\} $$
+\end{kol2}
+\begin{kol2}
+    Napędy uwzględniamy poprzez, gdzie
+
+    $$ \frac12 I_i \dot{q}^2_i $$
+    $ I_i $ - moment bezwładności silnika $i$
+\end{kol2}
+
+\vspace{0.5cm} \noindent
+Macierz pseudoinercji:
+\Large
+$$  J_{L_i} = \int_{L_i} r_i r_i^T\ dm
+    = \int_{L_i} \left[ \begin{matrix}
+        x^2     &   xy  &   xz  &   x   \\
+        yx      &   y^2 &   yz  &   y   \\
+        zx      &   zy  &   z^2 &   z   \\
+        x       &   y   &   z   &   1   \\
+    \end{matrix} \right] \ dm
+$$
+\normalsize
+
+\noindent
+Energia kinetyczna:
+
+$$  K = \frac12 \sum_{i=1}^n tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\}
++ \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
+= \frac12 \sum_{i=1}^n tr\left\{ (...) J_{L_i} (...)^T \right\} \dot{q}_j \dot{q}_k
++ \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
+$$
+
+\Large
+$$ E_k = \frac12 \dot{q}^T M(q) \dot{q} $$
+\normalsize
+
+$ M(q) $ - macierz bezwładności (wyznacznik zawsze dodatni)
+
+\vspace{1cm}
+\begin{kol2}
+    Równanie Lagrange'a (równanie dynamiki):
 
     \Large
     $$ \frac{d}{dt} \left( \frac{\delta \textbf{L}}{\delta \dot{q}} \right) - \frac{\delta \textbf{L}}{\delta q} = 0 $$
@@ -1192,11 +1242,11 @@ $$
 
     \Large
     $$ \textbf{L}(q,\dot{q}) = E_k - V $$
-    $$ E_k = \frac12 \dot{q}^T M(q) \dot{q} $$
     \normalsize
 \end{kol2}
 
 % ---------------------------------------------------------------------------
+\newpage
 \section{Kinematyka robota mobilnego}
 
 \begin{kol2}
@@ -1237,8 +1287,6 @@ $ A(q) $ - Macierz ograniczeń, zbiór równań BPB, PBW;
 \normalsize
 
 % ---------------------------------------------------------------------------
-\newpage
-
 \section{Przydatne wzorki}
 \subsection{Trygonometria}
 
