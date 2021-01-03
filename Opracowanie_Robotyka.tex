@@ -1205,7 +1205,7 @@ $$ K(q) = \sqrt{ \frac{...}{...} }$$
 \section{Dynamika sztywnego manipulatora}
 % Wykład 8
 
-Energię wyliczamy względem nieruchomego układu podstawowego $X_0Y_0Z_0$
+Energię sumujemy względem nieruchomego układu podstawowego $X_0Y_0Z_0$
 
 \noindent
 Położenie masy względem układu podstawowego:
@@ -1213,22 +1213,7 @@ $$ S_i = A_0^i(q_1, ..., q_i) r_i \hspace{1cm} \dot{S_i} = \dot{A_0^i} r_i $$
 
 $ r_i $ - położenie względem układu lokalne $X_iY_iZ_i$
 
-\vspace{0.5cm}
-\begin{kol2}
-    Energia kinetyczna ogniwa $L_i$:
-
-    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) \int_{L_i} r_i r_i^T\ dm (\dot{A_0^i})^T \right\} $$
-    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\} $$
-\end{kol2}
-\begin{kol2}
-    Napędy uwzględniamy poprzez, gdzie
-
-    $$ \frac12 I_i \dot{q}^2_i $$
-    $ I_i $ - moment bezwładności silnika $i$
-\end{kol2}
-
-\vspace{0.5cm} \noindent
-Macierz pseudoinercji:
+\subsubsection{Macierz pseudoinercji}
 \Large
 $$  J_{L_i} = \int_{L_i} r_i r_i^T\ dm
     = \int_{L_i} \left[ \begin{matrix}
@@ -1240,22 +1225,69 @@ $$  J_{L_i} = \int_{L_i} r_i r_i^T\ dm
 $$
 \normalsize
 
-\noindent
-Energia kinetyczna:
+\vspace{0.5cm}
+\begin{kol2}
+    \subsubsection{Energia kinetyczna}
+    Energia kinetyczna ogniwa $L_i$:
 
-$$  K = \frac12 \sum_{i=1}^n tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\}
-+ \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
-= \frac12 \sum_{i=1}^n tr\left\{ (...) J_{L_i} (...)^T \right\} \dot{q}_j \dot{q}_k
-+ \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
-$$
+    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) \int_{L_i} r_i r_i^T\ dm (\dot{A_0^i})^T \right\} $$
+    $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\} $$\
 
-\Large
-$$ E_k = \frac12 \dot{q}^T M(q) \dot{q} $$
-\normalsize
+    \noindent
+    Energia kinetyczna dla całego układu
+    \large
+    $$ E_k = \frac12 \dot{q}^T M(q) \dot{q} $$
+    \normalsize
 
-$ M(q) $ - macierz bezwładności (wyznacznik zawsze dodatni)
+    $ M(q) $ - macierz bezwładności (dodatnio określona $ A > 0 $)
+\end{kol2}
+\begin{kol2}
+    \subsubsection{Energia potencjalna}
 
-\vspace{1cm}
+    \noindent
+    Energia potencjalna ogniwa
+
+    $$ V_i(q) = -m_i <g, A_0^i, r_i> $$
+
+    $ g = ( g_x, g_y, g_z, 0 )^T $ - Wektor przbyśpieszenia ziemskiego
+
+    $ <A_0^i, r_i> $ - odpowiada masie ogniwa
+
+    \noindent
+    Energia potencjalna całego układu
+
+    $$ V(q) = \sum_{i=1}^n V_i(q) $$
+
+\end{kol2}
+
+% todo czy wzorek K = dlugi przechodzi bezposrednio w E_k ?
+% Energia kinetyczna dla całego układu
+% $$  K = \frac12 \sum_{i=1}^n tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\}
+% + \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
+% = \frac12 \sum_{i=1}^n tr\left\{ (...) J_{L_i} (...)^T \right\} \dot{q}_j \dot{q}_k
+% + \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
+% $$
+
+
+\begin{kol2}
+    \noindent
+    \
+\end{kol2}
+\begin{kol2}
+    Napędy uwzględniamy poprzez:
+
+    $$ I(q) = \frac12 I_i \dot{q}^2_i $$
+
+    Gdzie: $ I_i $ - moment bezwładności silnika $i$
+\end{kol2}
+
+\subsubsection{Lagranżjan dla całego układu}
+
+$$ L(q,\dot{q}) = E_k(q) + V(q) + I(q) $$
+% Skrót z https://youtu.be/O8DuiwN3unk?t=1417
+
+
+\vspace{0.5cm}
 \begin{kol2}
     Równanie Lagrange'a (równanie dynamiki):
 
