@@ -1213,7 +1213,7 @@ $$ S_i = A_0^i(q_1, ..., q_i) r_i \hspace{1cm} \dot{S_i} = \dot{A_0^i} r_i $$
 
 $ r_i $ - położenie względem układu lokalne $X_iY_iZ_i$
 
-\subsubsection{Macierz pseudoinercji}
+\subsection{Macierz pseudoinercji}
 \Large
 $$  J_{L_i} = \int_{L_i} r_i r_i^T\ dm
     = \int_{L_i} \left[ \begin{matrix}
@@ -1222,12 +1222,29 @@ $$  J_{L_i} = \int_{L_i} r_i r_i^T\ dm
         zx      &   zy  &   z^2 &   z   \\
         x       &   y   &   z   &   1   \\
     \end{matrix} \right] \ dm
+    = \left[ \begin{matrix}
+        I_{xx}    &   I_{xy}    &   I_{xz}    &   m \overline{x}_{śr}   \\
+        I_{xy}    &   I_{yy}    &   I_{yz}    &   m y_{ śr}  \\
+        I_{xz}    &   I_{yz}    &   I_{xz}    &   m z_{śr}  \\
+        m x_{śr}  &   m y_{śr}  &   m z_{śr}  &   m       \\
+    \end{matrix} \right]
 $$
 \normalsize
 
+\noindent
+Twierdzenie Steinera
+
+\Large
+$$ J = A J_0 A^T $$
+\normalsize
+
+$ A $ - Przekształcenie z układu $0$ (w który jest $J_0$ do układu $1$, w którym chcemy policzyć $J$
+
+
+% Początek: Nie mam pojęcia jak ogarnąć ten kawałek --------------------------------------------------
 \vspace{0.5cm}
 \begin{kol2}
-    \subsubsection{Energia kinetyczna}
+    \subsection{Energia kinetyczna}
     Energia kinetyczna ogniwa $L_i$:
 
     $$ K_i = \frac12 tr\left\{ (\dot{A_0^i}) \int_{L_i} r_i r_i^T\ dm (\dot{A_0^i})^T \right\} $$
@@ -1242,14 +1259,14 @@ $$
     $ M(q) $ - macierz bezwładności (dodatnio określona $ A > 0 $)
 \end{kol2}
 \begin{kol2}
-    \subsubsection{Energia potencjalna}
+    \subsection{Energia potencjalna}
 
     \noindent
     Energia potencjalna ogniwa
 
     $$ V_i(q) = -m_i <g, A_0^i, r_i> $$
 
-    $ g = ( g_x, g_y, g_z, 0 )^T $ - Wektor przbyśpieszenia ziemskiego
+    $ g = ( g_x, g_y, g_z, 0 )^T $ - Wektor przyśpieszenia ziemskiego
 
     $ <A_0^i, r_i> $ - odpowiada masie ogniwa
 
@@ -1259,14 +1276,6 @@ $$
     $$ V(q) = \sum_{i=1}^n V_i(q) $$
 
 \end{kol2}
-
-% todo czy wzorek K = dlugi przechodzi bezposrednio w E_k ?
-% Energia kinetyczna dla całego układu
-% $$  K = \frac12 \sum_{i=1}^n tr\left\{ (\dot{A_0^i}) J_{L_i} (\dot{A_0^i})^T \right\}
-% + \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
-% = \frac12 \sum_{i=1}^n tr\left\{ (...) J_{L_i} (...)^T \right\} \dot{q}_j \dot{q}_k
-% + \frac12 \sum_{i=1}^n I_i \dot{q_i}^2
-% $$
 
 
 \begin{kol2}
@@ -1281,19 +1290,21 @@ $$
     Gdzie: $ I_i $ - moment bezwładności silnika $i$
 \end{kol2}
 
-\subsubsection{Lagranżjan dla całego układu}
+\subsection{Lagranżjan dla całego układu}
 
 $$ L(q,\dot{q}) = E_k(q) + V(q) + I(q) $$
 % Skrót z https://youtu.be/O8DuiwN3unk?t=1417
-
+% Koniec -------------------------------------------------------------------------------------
 
 \vspace{0.5cm}
 \begin{kol2}
     Równanie Lagrange'a (równanie dynamiki):
 
     \Large
-    $$ \frac{d}{dt} \left( \frac{\delta \textbf{L}}{\delta \dot{q}} \right) - \frac{\delta \textbf{L}}{\delta q} = 0 $$
+    $$ \frac{d}{dt} \left( \frac{\delta \textbf{L}}{\delta \dot{q}} \right) - \frac{\delta \textbf{L}}{\delta q} = u $$
     \normalsize
+
+    $ u $ - Siły zewnętrzne (tarcia, st)
 \end{kol2}
 \begin{kol2}
     Energia:
@@ -1343,6 +1354,34 @@ $$ A(q) \cdot \dot{q} = 0 $$
 \large
 $ A(q) $ - Macierz ograniczeń, zbiór równań BPB, PBW;
 \normalsize
+
+\subsection{Układy nieholonomiczne}
+Nawias Liego pól wektorowych $f$ i $g$ z wektorem konfiguracji $q$
+
+\Large
+$$ [f, g] = \frac{\delta g}{\delta q} f - \frac{\delta f}{\delta q} g $$
+\normalsize
+
+\noindent
+Mała flaga - ciąg dystrybucji
+\Large
+$$ D_{i+1} = D_i + [D_0, D_i], i = 0, ... $$
+\normalsize
+
+\noindent
+Dystrybucja
+\Large
+$$ D_0 = span \{g_1(q), g_2(q), ..., g_m(q)\} $$
+\normalsize
+
+
+\noindent
+Stopień nieholonomiczności dystrybucji:
+
+\large
+Minimalna wartość indeksu $p$, dla której $r_p(q) = n$, gdzie $n$ - wymiar przestrzeni konfiguracyjnej, $r_i(q)$ to wymiar dystrybucji $D_i$.
+\normalsize
+
 
 % ---------------------------------------------------------------------------
 \section{Przydatne wzorki}

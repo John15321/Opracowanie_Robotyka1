@@ -28,10 +28,11 @@
 \contentsline {subsection}{\numberline {6.3}Jakobian manipulatora}{18}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Miary zręczności manipulator}{19}{subsection.6.4}%
 \contentsline {section}{\numberline {7}Dynamika sztywnego manipulatora}{20}{section.7}%
-\contentsline {subsubsection}{\numberline {7.0.1}Macierz pseudoinercji}{20}{subsubsection.7.0.1}%
-\contentsline {subsubsection}{\numberline {7.0.2}Energia kinetyczna}{20}{subsubsection.7.0.2}%
-\contentsline {subsubsection}{\numberline {7.0.3}Energia potencjalna}{20}{subsubsection.7.0.3}%
-\contentsline {subsubsection}{\numberline {7.0.4}Lagranżjan dla całego układu}{20}{subsubsection.7.0.4}%
+\contentsline {subsection}{\numberline {7.1}Macierz pseudoinercji}{20}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Energia kinetyczna}{20}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Energia potencjalna}{20}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Lagranżjan dla całego układu}{20}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Kinematyka robota mobilnego}{21}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Układy nieholonomiczne}{21}{subsection.8.1}%
 \contentsline {section}{\numberline {9}Przydatne wzorki}{21}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Trygonometria}{21}{subsection.9.1}%
